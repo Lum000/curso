@@ -58,7 +58,7 @@ body {
 }
 .login-button button{
     border: none;
-    background-color: yellow;
+    background-color: rgb(250, 0, 0);
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
@@ -139,6 +139,14 @@ body {
     font-weight: 500;
     font-size: 2rem;
     color: black;
+}
+.error{
+    background: red;
+    color: #00000016;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    width: 95%;
 }
 
 
