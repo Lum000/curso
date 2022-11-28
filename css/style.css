@@ -141,8 +141,7 @@ body {
     color: black;
 }
 .error{
-    background: red;
-    color: #00000016;
+    color: red;
     display: block;
     padding: 10px;
     border-radius: 10px;

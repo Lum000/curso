@@ -15,7 +15,7 @@
             <img src="imgs/logo.png" alt="">
         </div>
         <div class="form">
-            <form action="#">
+            <form action="loginval.php" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Login</h1>
@@ -37,7 +37,7 @@
                         <button><a href="#">Esqueci a senha</a></button>
                     </div>
                     <div class="enter-button">
-                        <button><a href="#">Logar</a></button>
+                        <button type="submit" name="submit" ><a href="#">Logar</a></button>
                     </div>
                 </div>
             </form>
