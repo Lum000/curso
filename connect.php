@@ -1,7 +1,7 @@
 <?php
     $dv_ip = 'localhost';
     $db_user = 'root';
-    $db_pass = '';
+    $db_pass = 'root';
     $db_db = 'registro.db';
 
     $con = new mysqli($dv_ip,$db_user,$db_pass,$db_db);
@@ -10,6 +10,7 @@
         echo "erro";
     }
     else{
+        echo print_r('ola');
     }
 
 

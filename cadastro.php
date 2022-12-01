@@ -16,7 +16,8 @@ if(isset($_POST['submit'])){
     }
     else{
         $_SESSION['sucesso'] = true;
-        mysqli_query($con,"INSERT INTO info_user(name,email,password,number) VALUES('$name','$email','$senha','$number')");
+        $sql = "INSERT INTO info_user(name,email,password,number) VALUES('$name','$email','$senha','$number')";
+        mysqli_query($con,$sql);
         header('location:login.php');
     }
     if($_POST['confirmPassword'] != $_POST['password']){
