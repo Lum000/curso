@@ -4,9 +4,20 @@ $name = $_POST["user"];
 $senha = $_POST['password'];
 
 if(isset($_POST['submit'])){
-    $sql = "SELECT password FROM info_user WHERE name = '$name' or email ='$name'";
+    $sql = "SELECT COUNT(*) as total FROM info_user WHERE name = '$name' or email = '$name'";
     $result = mysqli_query($con,$sql);
     $row = mysqli_fetch_assoc($result);
-    echo print_r($row);
+    if($row['total'] == 1){
+        $sql = "SELECT password FROM info_user WHERE name = '$name' OR email = '$name'";
+        $result = mysqli_query($con,$sql);
+        $row = mysqli_fetch_assoc($result);
+        $verify = password_verify($senha,$row['password']);
+        if($verify == 1){
+            print_r('LOGIN EFETUADO');
+        }
+        else{
+            echo "erro";
+        }
+    }
 }
 ?>

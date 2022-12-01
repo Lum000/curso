@@ -1,28 +1,23 @@
 <?php
 include_once('connect.php');
-$name = mysqli_real_escape_string($con, trim($_POST['name']));
-$email = mysqli_real_escape_string($con, trim($_POST['email']));
-$senha = mysqli_real_escape_string($con, trim(md5($_POST['password'])));
+$name = $_POST['name'];
+$email = $_POST['email'];
 $number = $_POST['number'];
-$username_error = null;
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $sql = ("SELECT COUNT(*) as total from info_user where name = '$name' or email = '$email'");
 $result = mysqli_query($con,$sql);
 $row = mysqli_fetch_assoc($result);
+print_r($row['total']);
 
 if(isset($_POST['submit'])){
     if($row['total'] == 1){
-        header('location:index.php?error=Usuario/Email Ja Existe');
-        exit;
+        header('location:index.php?error=USUARIO JA EXISTE');
     }
-    else{
-        $_SESSION['sucesso'] = true;
-        $sql = "INSERT INTO info_user(name,email,password,number) VALUES('$name','$email','$senha','$number')";
-        mysqli_query($con,$sql);
-        header('location:login.php');
+    elseif($_POST['confirmPassword'] != $password){
+        header('location:index.php?error_senha=Senhas Não Batem !!');
     }
-    if($_POST['confirmPassword'] != $_POST['password']){
-        echo "<script>alert('Por favor coloque senhas iguais')</script>";
-        die();
-    }
+    $sql = "INSERT INTO info_user(name,email,number,password) VALUES('$name','$email','$number','$password')";
+    $action = mysqli_query($con,$sql);
+    header('location:index.php?success=CADASTRO EFETUADO');
 }
 ?>

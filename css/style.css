@@ -142,14 +142,11 @@ body {
 }
 .error{
     color: red;
-    display: block;
-    padding: 10px;
-    border-radius: 10px;
-    width: 95%;
+    font-size: 1rem;
 }
 
 
-@media screen and (max-width: 1330px) {
+@media screen and (max-width: 1230px) {
     .form-image {
         display: none;
     }

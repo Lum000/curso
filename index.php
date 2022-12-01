@@ -52,6 +52,7 @@ session_start();
                     <div class="input-box">
                         <label for="password">Senha</label>
                         <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        <p><?phpif(isset($_GET['error_senha'])){echo $_GET['error_senha'];} ?></p>
                     </div>
 
 
