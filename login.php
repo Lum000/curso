@@ -21,7 +21,7 @@
                         <h1>Login</h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="index.php">Cadastrar-Se</a></button>
+                        <button><a href="cadastrar.php">Cadastrar-Se</a></button>
                     </div>
                 </div>
                 <div class="input-group">
