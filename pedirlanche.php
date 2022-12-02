@@ -1,7 +1,10 @@
 
 <?php
+sessin_start();
+include_once('connect.php');
+
 if(isset($_POST['fundie'])){
-    print_r('FUNDIE');
+    $_SESSION[]
 }
 elseif(isset($_POST['burcas'])){
     print_r('burcas');
