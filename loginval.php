@@ -13,7 +13,9 @@ if(isset($_POST['submit'])){
         $row = mysqli_fetch_assoc($result);
         $verify = password_verify($senha,$row['password']);
         if($verify == 1){
-            print_r('LOGIN EFETUADO');
+            session_start();
+            $_SESSION['name'] = $name;
+            header('location:index.php');
         }
         else{
             echo "erro";

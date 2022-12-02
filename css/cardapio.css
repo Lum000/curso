@@ -16,6 +16,7 @@ body{
     max-width: 170px;
     max-height: 70px;
     cursor: pointer;
+    background-color: none;
 }
 li,a{
     font-family: 'Work Sans', sans-serif;

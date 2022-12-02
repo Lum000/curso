@@ -17,6 +17,6 @@ if(isset($_POST['submit'])){
     }
     $sql = "INSERT INTO info_user(name,email,number,password) VALUES('$name','$email','$number','$password')";
     $action = mysqli_query($con,$sql);
-    header('location:cadastrar.php?success=CADASTRO EFETUADO');
+    header('location:login.php?success=CADASTRO EFETUADO');
 }
 ?>
