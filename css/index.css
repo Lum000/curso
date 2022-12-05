@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.579);
+}
+.logo{
+    max-width: 170px;
+}
+
+li,a{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1,5rem;
+    color: white;
+    text-decoration: none;
+}
+img{
+    max-width: 100px;
+}
+.nav_links{
+    list-style: none;
+}
+.nav_links li:hover{
+    animation-name: zoom;
+    animation-duration: 270ms;
+    animation-fill-mode: forwards;
+
+}
+.nav_links li{
+    display: inline-block;
+    padding: 40px;
+}
+.welcome-text p,h1{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+.burguer{
+    padding-left: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.burguer-item{
+    color: white;
+    display: flex;
+}
+.burguer-button{
+    display: flex;
+    padding: 30px;
+}
+.burguer-item span{
+    display: flex;
+    padding: 10px;
+}
+.burguer-item button{
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 90px;
+    height: 70px;  
+    background:none;
+}
+.burguer-item button:hover{
+    scale: 1.2;
+}
+.burguer-item a{
+    color: white;
+    font-size: 1.5rem;
+}
+.burguer-item p{
+    padding-top: 35px;
+    transform: translateX(-185px);
+    align-items: center
+}
+
+@keyframes zoom {
+    from {
+        scale: 1;
+         padding-top: 0px;
+        background-color: black;}
+    to {scale: 1.5;
+    padding-top: 15px;}
+}

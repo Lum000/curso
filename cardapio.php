@@ -1,3 +1,9 @@
+<?php 
+session_start();
+$name = $_SESSION['name'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,7 +20,7 @@
             <ul class="nav_links">
                 <li><a href="#">Cardápio</a></li>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </nav>
         <a href="#"><img src="imgs/download-removebg-preview.png" class="cart"></a>
@@ -30,7 +36,7 @@
                             <span class="iten-name">FONDUE BURGUER</span>
                             <span class="iten-price">R$25,00</span><br>
                             <p>Um lanche delicioso para aqueles que apreciam cheddar<br> Ingredientes: Pão,Hamburguer,Cheddar fatiado,Cheddar liquido,Batata Frita</p>
-                            <button type="submit" value="fundie" name="fundie"><a>ADICIONAR</a></button>
+                            <button type="submit" value="fundie" name="fundie" id="1"><a>ADICIONAR</a></button>
                         </div>
                     </div>
                     <div class="menu-image">
@@ -39,7 +45,7 @@
                             <span class="iten-name">X-BURCA'S</span>
                             <span class="iten-price">R$32,00</span><br>
                             <p>Esse lanche è para quem esta preparado para se sujar com deliciosos Ingredientes<br> Ingredientes: Pão,2 Hamburguer,2 Ovos,Bacon,Calabresa,Alface,Cebola roxa,Cheddar fatiado,Mussarela,Pepino,Tomate</p>
-                            <button type="submit" name="burcas" value="burcas"><a>ADICIONAR</a></button>
+                            <button type="submit" name="burcas" value="burcas" id="2"><a>ADICIONAR</a></button>
                         </div>
                     </div>
                 </div>

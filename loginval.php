@@ -1,4 +1,6 @@
 <?php
+session_start();
+$logged = false;
 include_once('connect.php');
 $name = $_POST["user"];
 $senha = $_POST['password'];
@@ -13,9 +15,10 @@ if(isset($_POST['submit'])){
         $row = mysqli_fetch_assoc($result);
         $verify = password_verify($senha,$row['password']);
         if($verify == 1){
-            session_start();
+            $logged = true;
+            $_SESSION['logged'] = $logged;
             $_SESSION['name'] = $name;
-            header('location:index.php');
+            header('location:cardapio.php');
         }
         else{
             echo "erro";
