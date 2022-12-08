@@ -9,9 +9,6 @@
     {
         echo "erro";
     }
-    else{
-        echo print_r('ola');
-    }
 
 
 
